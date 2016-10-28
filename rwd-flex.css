@@ -1,0 +1,54 @@
+/* RWD-Flex&trade; */
+/* Copyright 2016 Andrew Porter All Rights Reserved */
+* {
+	box-sizing: border-box;
+}
+
+html, body {
+	height: 100%;
+	margin: 0px;
+}
+
+/* Columns (Desktop) */
+@media only screen and (min-width: 768px){
+
+	div.box {
+		display: flex;
+		display: -webkit-flex;
+		align-items: center;
+		flex-flow: column nowrap;
+	}
+	
+	div.box div.row {
+		display: inline-flex;
+		flex-flow: row nowrap;
+	}
+
+}
+
+/* Columns (Mobile) */
+@media only screen and (max-width: 768px) {
+	/* A column must be wrapped in a row */
+	div.box div.row {
+		-webkit-flex: auto;
+		-moz-flex: auto;
+		-ms-flex: auto;
+		-o-flex: auto;
+		flex: auto;
+		width: 100%;
+	}
+}
+
+.left {
+	float: left;
+}
+
+.right {
+	float: right;
+}
+
+.center {
+	align-self: center;
+}
+
+
