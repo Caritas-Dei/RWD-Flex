@@ -1,0 +1,5 @@
+/* debugging */
+
+.debug, .debug-all, .debug-all * {
+	border: 1px solid red;
+}
