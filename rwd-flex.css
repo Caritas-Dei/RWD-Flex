@@ -1,55 +1,118 @@
-/* RWD-Flex */
-/* Copyright Andrew Porter */
-/* Released under the MIT License */
+/* RWD-Flex&trade; */
+/* Copyright 2016 Andrew Porter All Rights Reserved */
 * {
 	box-sizing: border-box;
 }
 
-html, body {
+html, body {	
 	height: 100%;
 	margin: 0px;
+}
+
+body {
+	display: -webkit-flex;
+	display: flex;
+	flex-flow: column wrap;
+	z-index: 0;
 }
 
 /* Columns (Desktop) */
 @media only screen and (min-width: 768px){
 
-	div.box {
+	.container, #header, #content, #footer, #left-margin, #right-margin {
 		display: flex;
 		display: -webkit-flex;
-		align-items: center;
-		flex-flow: column nowrap;
-	}
-	
-	div.box div.row {
-		display: inline-flex;
-		flex-flow: row nowrap;
 	}
 
 }
 
 /* Columns (Mobile) */
 @media only screen and (max-width: 768px) {
-	/* A column must be wrapped in a row */
-	div.box div.row {
+	/* A row must be wrapped in a container */
+	.container {
+		display: -webkit-flex;
+		display: flex;	
+	}
+	.container .row {
 		-webkit-flex: auto;
 		-moz-flex: auto;
 		-ms-flex: auto;
 		-o-flex: auto;
+		display: -webkit-flex;
+		display: flex;
 		flex: auto;
-		width: 100%;
+		flex-flow: row nowrap;
 	}
+	
 }
 
-.left {
-	float: left;
-}
-
-.right {
-	float: right;
+/* Alignment */
+.flow-column {
+	flex-flow: column wrap;
 }
 
 .center {
+	justify-content: center;
+	align-content: center;
+}
+
+.center-x {
+	justify-content: center;
+}
+
+.center-y {
+	align-content: center;
+}
+
+.centered {
 	align-self: center;
 }
 
+
+.start {
+	justify-content: flex-start;
+	align-content: flex-start;	
+}
+
+.end {
+	justify-content: flex-end;
+	align-content: flex-end;
+}
+
+.items-start {
+	align-content: flex-start;
+	align-items: flex-start;
+		
+}
+
+.items-left {
+	align-items: flex-start;
+}
+
+.items-center {
+	align-items: center;	
+}
+
+.items-right {
+	align-items: flex-end;
+}
+
+
+.condense {
+	justify-content: center;
+	align-items: center;
+	align-content: center;		
+}
+
+.condense > * {
+	margin: 0px;
+}
+
+.condense > :first-child {
+	margin-top: inherit; 	
+}
+
+.condense > :last-child {
+	margin-bottom: inherit;	
+}
 
