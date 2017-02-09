@@ -1,0 +1,72 @@
+/* color.css by Andrew Porter */
+
+.black {
+	background-color: black;
+	color: white;		
+}
+
+.white {
+	background-color: white;
+	color: black;	
+}
+
+.red {
+	background-color: red;	
+}
+
+.orange {
+	background-color: orange;
+}
+
+.yellow {
+	background-color: yellow;
+}
+
+.green {
+	background-color: green;
+}
+
+.blue {
+	background-color: blue;
+}
+
+.indigo {
+	background-color: indigo;
+}
+
+.violet {
+	background-color: violet;	
+}
+
+
+/* HTML5 colors (in order value) */
+
+.navy {
+	background-color: navy;
+	background-color: #000080;
+}
+
+.dark-blue {
+	background-color: dark-blue;
+	background-color: #00008b;
+}
+
+.medium-blue {
+	background-color: mediumblue;
+	background-color: #0000cd;
+}
+
+.dark-green {
+	background-color: green;
+	background-color: #008000;
+}
+
+.teal {
+	background-color: teal;
+	background-color: #008080;
+}
+
+.dark-cyan {
+	background-color: darkcyan;
+	background-color: #008b8b;
+}
