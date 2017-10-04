@@ -16,61 +16,64 @@ body {
 	z-index: 0;
 }
 
-div.image {
-	min-width: 0;
-	min-height: 0;
-}
-
-div.image > img {
-	max-width: 100%;
-	max-height: 100%;
-	height: auto;
-}
-
-img {
-	object-fit: contain;
-	-webkit-object-fit: contain;
-	-o-object-fit: contain;	
-}
-
-/* Columns (Desktop) */
+/* Desktop */
 @media only screen and (min-width: 768px){
-	  
-	 .row,
-	 #header, #content, #footer, #left-margin, #right-margin {
-		display: -webkit-flex;
-		display: flex;
-		display: flexbox;
+		
+	.row,
+	#header, #content, #footer, #left-margin, #right-margin {
+	 	display: -webkit-flex;
+		display: -webkit-box;
 		display: -ms-flexbox;
+		display: flexbox;
+		display: flex;
 		flex-flow: row nowrap;
-		width: 100%;
 	}
 	
 	.column {
 		display: -webkit-flex;
-		display: flex;
-		display: flexbox;
+		display: -webkit-box;
 		display: -ms-flexbox;
+		display: flexbox;
+		display: flex;
 		flex-flow: column nowrap;
-		width: 100%;
-		height: 100%;
 	}
 	
 	.flexbox {
 		display: -webkit-flex;
-		display: flex;
-		display: flexbox;
+		display: -webkit-box;
 		display: -ms-flexbox;
+		display: flexbox;
+		display: flex;
 		flex-flow: row wrap;
+	}
+	
+	div.image {
+		min-width: 0;
+		min-height: 0;
+	}
+	
+	div.image > img {
+		max-width: 100%;
+		max-height: 100%;
+		height: auto;
+	}
+
+	img {
+		object-fit: contain;
+		-webkit-object-fit: contain;
+		-o-object-fit: contain;	
 	}
 
 }
 
-/* Columns (Mobile) */
+/* Mobile */
 @media only screen and (max-width: 768px) {
 	
 	.container {
 		display: -webkit-flex;
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: flexbox;
 		display: flex;
 		width: 100%;
 	}
@@ -92,20 +95,60 @@ img {
 		width: 100%;
 	}
 	
+	div.image {
+		min-width: 0;
+		min-height: 0;
+	}
+
+	div.image > img {
+		max-width: 100%;
+		max-height: 100%;
+		height: auto;
+	}
+
+	img {
+		object-fit: contain;
+		-webkit-object-fit: contain;
+		-o-object-fit: contain;	
+	}
+	
 }
 
-/* flexbox layout anchors */
+/* flexbox layout */
 
-.uniform-box {
-	-webkit-flex: auto;
-	flex: auto;
-	align-items: stretch;
-	align-content: stretch;
-	justify-content: stretch;
+.uniform-spread-h, .uniform-spread {
+	justify-content: space-around;
 }
 
-.uniform-box > * {
-	align-self: stretch;
-	width: auto;	
+.uniform-spread-v, .uniform-spread {
+	align-content: space-around;
 }
+
+.spread-h, .spread {
+	justify-content: space-between;
+}
+
+.spread-v, .spread {
+	align-content: space-between;
+}
+
+.center-h {}
+
+.center-v {}
+
+.top {}
+
+.right {}
+
+.bottom {}
+
+.left {}
+
+.self-top {}
+
+.self-right {}
+
+.self-bottom {}
+
+.self-left {}
 
