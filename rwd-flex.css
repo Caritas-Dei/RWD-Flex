@@ -1,5 +1,5 @@
 /* RWD-Flex&trade; */
-/* Copyright 2017 Andrew Porter All Rights Reserved */
+/* Copyright 2018 Andrew Porter All Rights Reserved */
 * {
 	box-sizing: border-box;
 }
@@ -20,7 +20,8 @@ body {
 @media only screen and (min-width: 768px){
 		
 	.row,
-	#header, #content, #footer, #left-margin, #right-margin {
+	#header, #content, #footer, #left-margin, #right-margin,
+	article {
 	 	display: -webkit-flex;
 		display: -webkit-box;
 		display: -ms-flexbox;
@@ -114,7 +115,7 @@ body {
 	
 }
 
-/* flexbox layout */
+/* flex box layout */
 
 .uniform-spread-h, .uniform-spread {
 	justify-content: space-around;
@@ -132,13 +133,22 @@ body {
 	align-content: space-between;
 }
 
-.center-h {}
+.center-h, .center {
+	justify-content: center;
+}
 
-.center-v {}
+.center-v, .center {
+	align-content: center;
+}
 
-.top {}
+.top {
+	align-items: flex-start;
+	align-content: flex-start;
+}
 
-.right {}
+.right {
+	justify-content: flex-end;
+}
 
 .bottom {}
 
@@ -151,4 +161,3 @@ body {
 .self-bottom {}
 
 .self-left {}
-
