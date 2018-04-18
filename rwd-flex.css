@@ -1,5 +1,5 @@
-/* RWD-Flex&trade; */
-/* Copyright 2018 Andrew Porter All Rights Reserved */
+/* RWD-Flex */
+/* Copyright 2018 Andrew Porter */
 * {
 	box-sizing: border-box;
 }
@@ -20,8 +20,7 @@ body {
 @media only screen and (min-width: 768px){
 		
 	.row,
-	#header, #content, #footer, #left-margin, #right-margin,
-	article {
+	#header, #content, #footer, #left-margin, #right-margin {
 	 	display: -webkit-flex;
 		display: -webkit-box;
 		display: -ms-flexbox;
